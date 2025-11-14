@@ -68,3 +68,6 @@ def find_max_and_second(values):
 
 number = [101, 10, 25, 7, 99, 42]
 print(find_max_and_second(number))  # Output: (101, 99)
+
+
+
