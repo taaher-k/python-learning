@@ -21,8 +21,8 @@ print(text[1::2])   # start at index 1, step by 2
 #3
 
 a= input(str("enter the string"))
+
+
 for i in range(1,len(a),2):
     i = a[i]    
-print(i, end=" ")    
-
-
+    print(i, end="")    
