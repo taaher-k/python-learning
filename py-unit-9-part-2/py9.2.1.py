@@ -24,6 +24,8 @@ def create_directory():
     except Exception as e:
         print(f"Error: {e}")
 
+
+
 def list_directory_contents():
     path = input("Enter directory path (leave blank for current): ")
     if not path:
