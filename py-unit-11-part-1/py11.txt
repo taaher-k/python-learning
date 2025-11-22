@@ -1,0 +1,111 @@
+Here’s a clear and complete explanation of OOP (Object-Oriented Programming) in Python with runnable examples.
+
+1. What is OOP in Python?
+
+Object-Oriented Programming (OOP) is a way of structuring code using classes and objects to model real-world entities.
+It helps make code modular, reusable, and easier to maintain.
+
+2. Key OOP Concepts in Python
+a) Class and Object
+Class: A blueprint for creating objects.
+Object: An instance of a class.
+# Example: Class and Object
+class Car:
+    def __init__(self, brand, model):
+        self.brand = brand  # Instance variable
+        self.model = model
+
+    def display_info(self):
+        print(f"Car: {self.brand} {self.model}")
+
+# Creating objects
+car1 = Car("Toyota", "Corolla")
+car2 = Car("Tesla", "Model S")
+
+car1.display_info()
+car2.display_info()
+
+b) Encapsulation
+Hiding internal details and exposing only necessary parts.
+Achieved using private (__var) and protected (_var) attributes.
+class BankAccount:
+    def __init__(self, owner, balance):
+        self.owner = owner
+        self.__balance = balance  # Private variable
+
+    def deposit(self, amount):
+        if amount > 0:
+            self.__balance += amount
+            print(f"Deposited: {amount}")
+        else:
+            print("Invalid deposit amount.")
+
+    def get_balance(self):
+        return self.__balance
+
+account = BankAccount("Alice", 1000)
+account.deposit(500)
+print("Balance:", account.get_balance())
+
+c) Inheritance
+Allows a class to inherit properties and methods from another class.
+class Vehicle:
+    def __init__(self, brand):
+        self.brand = brand
+
+    def start(self):
+        print(f"{self.brand} is starting...")
+
+class Bike(Vehicle):  # Inheriting from Vehicle
+    def ride(self):
+        print(f"{self.brand} is being ridden.")
+
+bike1 = Bike("Yamaha")
+bike1.start()
+bike1.ride()
+
+d) Polymorphism
+Same method name, different behavior depending on the object.
+class Dog:
+    def speak(self):
+        return "Woof!"
+
+class Cat:
+    def speak(self):
+        return "Meow!"
+
+# Polymorphism in action
+for animal in (Dog(), Cat()):
+    print(animal.speak())
+
+e) Abstraction
+Hiding implementation details using abstract classes (via abc module).
+from abc import ABC, abstractmethod
+
+class Shape(ABC):
+    @abstractmethod
+    def area(self):
+        pass
+
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius = radius
+
+    def area(self):
+        return 3.14 * self.radius ** 2
+
+circle = Circle(5)
+print("Circle Area:", circle.area())
+
+
+✅ Summary Table
+
+Concept	Purpose
+Class & Object	Blueprint & instance creation
+Encapsulation	Hide internal details
+Inheritance	Reuse code from parent class
+Polymorphism	Same method, different behavior
+Abstraction	Hide implementation, show interface
+
+If you want, I can prepare a single Python program that demonstrates all OOP concepts together in one example so you can run and learn step-by-step.
+Do you want me to prepare that?
