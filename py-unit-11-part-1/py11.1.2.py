@@ -28,3 +28,36 @@ t.convertFahrenheit(c)
 
 f = float(input("Enter temperature in Fahrenheit: "))
 t.convertCelsius(f)
+
+
+
+
+
+#2
+
+
+#WITH CONSTRUCTOR
+
+class Temperature:
+    def __init__(self, value):   # constructor
+        self.value = value       # initialize temperature value
+
+    def convertFahrenheit(self):
+        fahrenheit = (self.value * 9/5) + 32
+        print(f"{self.value}°C = {fahrenheit}°F")
+
+    def convertCelsius(self):
+        celsius = (self.value - 32) * 5/9
+        print(f"{self.value}°F = {celsius}°C")
+
+
+# --- Program Execution ---
+# Convert Celsius to Fahrenheit
+c = float(input("Enter temperature in Celsius: "))
+temp1 = Temperature(c)          # constructor initializes with Celsius
+temp1.convertFahrenheit()
+
+# Convert Fahrenheit to Celsius
+f = float(input("Enter temperature in Fahrenheit: "))
+temp2 = Temperature(f)          # constructor initializes with Fahrenheit
+temp2.convertCelsius()
