@@ -34,7 +34,7 @@ print(is_anagrame(s1, s2))   # Output: True
 
 #3
 
-
+#incorrect code do not use it 
 a =input(str("enter the first word to check an anagram "))
 b =input(str("enter the second word to check an anagram "))
 
