@@ -5,6 +5,41 @@
 
 
 
+class Temperature:
+    def __init__(self, value, scale="C"):
+        # value = numeric temperature
+        # scale = "C" for Celsius or "F" for Fahrenheit
+        self.value = value
+        self.scale = scale.upper()
+
+    def convertFahrenheit(self):
+        if self.scale == "C":
+            fahrenheit = (self.value * 9/5) + 32
+            print(f"{self.value}°C = {fahrenheit:.2f}°F")
+        else:
+            print("Temperature is already in Fahrenheit.")
+
+    def convertCelsius(self):
+        if self.scale == "F":
+            celsius = (self.value - 32) * 5/9
+            print(f"{self.value}°F = {celsius:.2f}°C")
+        else:
+            print("Temperature is already in Celsius.")
+
+
+# Example usage:
+# Initialize with Celsius
+temp1 = Temperature(25, "C")
+temp1.convertFahrenheit()
+
+# Initialize with Fahrenheit
+temp2 = Temperature(77, "F")
+temp2.convertCelsius()
+
+
+
+
+
 
 
 class Temperature:
