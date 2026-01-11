@@ -45,12 +45,12 @@ newtuple = (23,9,36,748,57487,4585,4874,)
 
 print(newtuple[:4]);
 
-
+#print from 23 to 748
 print("________________________________________________________________________________________________")
 
 
 
-ck_vowel= input("Enter your name: ");
+ck_vowel = input("Enter your name: ");
 
 converted_ck_vowel = list(ck_vowel)
 
